@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var countZero: UILabel!
-    @IBOutlet weak var buttonCount: UIButton!
     
     var count = 0
     
