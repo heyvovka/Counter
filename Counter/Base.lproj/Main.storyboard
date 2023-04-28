@@ -16,16 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Значение счётчика: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-jh-cnt">
-                                <rect key="frame" x="38" y="202" width="318" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-EO-kxc">
-                                <rect key="frame" x="17" y="675" width="361" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-EO-kxc">
+                                <rect key="frame" x="16" y="678" width="361" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="Ofs-iI-aef"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Посчитать">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
@@ -34,9 +29,27 @@
                                     <action selector="incrementCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMy-bK-OB6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-jh-cnt">
+                                <rect key="frame" x="38" y="202" width="317" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="v4j-Za-8v5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bKo-jh-cnt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="8qY-Jl-JjO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o4f-EO-kxc" secondAttribute="trailing" constant="16" id="B1i-YE-5Ni"/>
+                            <constraint firstItem="o4f-EO-kxc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bKo-jh-cnt" secondAttribute="bottom" constant="440" id="HcJ-K8-Prs"/>
+                            <constraint firstItem="o4f-EO-kxc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KeM-a8-Y8M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o4f-EO-kxc" secondAttribute="bottom" constant="49" id="Ps7-eS-nry"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bKo-jh-cnt" secondAttribute="trailing" constant="38" id="tzp-WW-dc8"/>
+                            <constraint firstItem="bKo-jh-cnt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="v34-D7-JFO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="countZero" destination="bKo-jh-cnt" id="3HU-jB-nea"/>

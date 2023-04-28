@@ -8,27 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak private var countZero: UILabel!
 
-    @IBOutlet weak var countZero: UILabel!
-    
-    var count = 0
-    
-    func letsCount() {
-        count += 1
-    }
+    private var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
     }
-
-    @IBAction func incrementCount(_ sender: Any) {
+    
+    @IBAction private func incrementCount(_ sender: Any) {
         self.letsCount()
         
-        let countResult = "Значение счётчика: " + "\(count)"
+       let countResult = "Значение счётчика: " + "\(count)"
         countZero.text = countResult
     }
     
+    private func letsCount() {
+        count += 1
+    }
 }
 
