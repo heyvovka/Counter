@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBAction private func incrementCount(_ sender: Any) {
         self.letsCount()
         
-       let countResult = "Значение счётчика: " + "\(count)"
+    let countResult = "Значение счётчика: " + "\(count)"
         countZero.text = countResult
     }
     
